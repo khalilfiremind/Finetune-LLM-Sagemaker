@@ -64,7 +64,9 @@ pip install -r requirements.txt
 2. **Deploy Infrastructure**
    ```bash
    cd src/infra
-   sam deploy
+   sam validate
+   sam build
+   sam deploy --no-confirm-changeset --no-fail-on-empty-changeset                
    ```
 
 3. **Run the Chat Interface**
@@ -95,10 +97,3 @@ The model inference can be customized by adjusting the following parameters:
 - `do_sample`: Whether to use sampling for generation
 - `stop`: List of stop sequences
 
-## License
-
-[Add your license information here]
-
-## Contributing
-
-[Add contribution guidelines here]
