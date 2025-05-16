@@ -1,0 +1,1 @@
+{"prompt": "Answer user query, be helpful, don't come up with facts. Write a response that appropriately completes the request.\n\n### Input:\n{prompt}\n\n", "completion": " {completion}"}
