@@ -1,2 +1,16 @@
 **/.ipynb_checkpoints/
 **/.aws-sam/
+.DS_Store
+.env
+.venv
+.vscode
+.idea
+.pytest_cache
+.mypy_cache
+.ruff_cache
+.cache
+.pytest_cache
+.pytest_cache
+.pytest_cache
+.pytest_cache
+**/__pycache__/
