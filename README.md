@@ -16,10 +16,12 @@ This project implements an AI chat interface using AWS SageMaker for model deplo
     │   ├── 03-Deploy.ipynb
     │   ├── 04-inference.ipynb
     │   ├── dataset.jsonl
-    │   └── template.json
+    │   ├── template.json
+    │   └── lambda/
     └── infra/
         ├── samconfig.toml
-        └── template.yaml
+        ├── template.yaml
+        └── .aws-sam/
 ```
 
 ## Prerequisites
@@ -46,11 +48,13 @@ pip install -r requirements.txt
 - `01-synthetic data generation.ipynb`: Notebook for generating synthetic training data
 - `02-Finetune.ipynb`: Notebook for fine-tuning the language model
 - `dataset.jsonl`: Training dataset in JSONL format
+- `template.json`: Template for data generation
 
 ### 2. Model Deployment
 - `03-Deploy.ipynb`: Notebook for deploying the model to SageMaker
 - `template.yaml`: AWS SAM template for infrastructure deployment
 - `samconfig.toml`: SAM CLI configuration
+- `lambda/`: Directory containing AWS Lambda function code for serverless deployment
 
 ### 3. Inference
 - `inference.py`: Main inference script for interacting with the deployed model
@@ -81,6 +85,7 @@ pip install -r requirements.txt
 - Streaming responses from the model
 - Configurable model parameters (temperature, max tokens, etc.)
 - Error handling and graceful exit options
+- Serverless deployment option using AWS Lambda
 
 ## Configuration
 
@@ -96,4 +101,12 @@ The model inference can be customized by adjusting the following parameters:
 - `temperature`: Controls randomness in the output
 - `do_sample`: Whether to use sampling for generation
 - `stop`: List of stop sequences
+
+## Development Workflow
+
+1. Start with data generation using `01-synthetic data generation.ipynb`
+2. Fine-tune the model using `02-Finetune.ipynb`
+3. Deploy the model using `03-Deploy.ipynb`
+4. Test the deployment using `04-inference.ipynb`
+5. Use `inference.py` for production inference
 
