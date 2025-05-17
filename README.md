@@ -20,8 +20,7 @@ This project implements an AI chat interface using AWS SageMaker for model deplo
     │   └── lambda/
     └── infra/
         ├── samconfig.toml
-        ├── template.yaml
-        └── .aws-sam/
+        └── template.yaml
 ```
 
 ## Prerequisites
